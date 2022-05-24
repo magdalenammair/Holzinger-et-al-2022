@@ -56,15 +56,15 @@ lines = repro[repro$treatment == "control_0",] %>%
 
 # plot -------
 
-png("Plots/plot_repro.png", width = 25, height = 15, units = "cm", res = 1000)
-
+#png("Plots/plot_repro.png", width = 25, height = 15, units = "cm", res = 500)
+tiff("Plots/plot_repro.tiff", height = 15, width = 25, units = "cm", res = 500)
 opar <- par(oma = c(5,1,1,1), mfrow = c(1,2), bty = "l", xpd = TRUE)
 
 boxplot(cocoons ~treatment, data = plot.repro, las = 2, xlab = "", ylab = "Number of coccoons", 
         names = rep("",14), xaxt = "n", pch = 20,
         col = as.numeric(as.factor(levels(plot.repro$treatment))))
 mtext(c("Concentration", "0", "", rep(c("0.5","2"), 4), "","0.5","2","8"),at = c(-2.5, seq(1, 14, 1)), side = 1, line = 0, cex = 0.8)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
       side = 1, line = 1.5, las = 2)
 arrows(c(2, 11), -15, c(2, 11), 52, angle = 0, lwd = 1.3)
 text(x = x.sig, y = y.sig$coc, "***", pos = 3)
@@ -77,7 +77,7 @@ boxplot(juvenile ~treatment, data = plot.repro, las = 2, xlab = "", ylab = "Numb
         names = rep("",14), xaxt = "n", pch = 20,
         col = as.numeric(as.factor(levels(plot.repro$treatment))))
 mtext(c("0", "", rep(c("0.5","2"), 4), "","0.5","2","8", "Vol%"),at = c(seq(1, 14, 1), 16), side = 1, line = 0, cex = 0.8)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
       side = 1, line = 1.5, las = 2)
 arrows(c(2, 11), -15, c(2, 11), 52, angle = 0, lwd = 1.3)
 text(x = x.sig, y = y.sig$juv, "***", pos = 3)

@@ -58,7 +58,8 @@ lines = plot.ROS[plot.ROS$treatment == "control__0",] %>% summarise(meanCAT = me
 
 
 #plot----------------
-png("Plots/plot_ROS.png", width = 25, height = 12, units = "cm", res = 1000)
+#png("Plots/plot_ROS.png", width = 25, height = 12, units = "cm", res = 500)
+tiff("Plots/plot_ROS.tiff", height = 12, width = 25, units = "cm", res = 500)
 
 op <- par(oma = c(7,1.5,1,1), mfrow = c(1, 3), bty = "l", xpd = TRUE)
 
@@ -68,7 +69,7 @@ boxplot(CAT ~ treatment, data = plot.ROS, las = 2,
         col = as.numeric(as.factor(levels(plot.ROS$treatment))),
         ylim = c(0, 35), pch = 20)
 mtext(c("Concentration", "0", "", "0.5", rep(c("0.5","2"), 3), "","0.5","2", "8"),at = c(-2, seq(1, 13, 1)), side = 1, line = 0, cex = 0.7)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
       side = 1, line = 1.5, las = 2)
 arrows(c(2, 10), -20, c(2, 10), 35, angle = 0, lwd = 1.3)
 text(x = x.sigCAT, y = y.sigCAT, c("**", "*", "*", "**", "*"), pos = 3, cex = 1.7)
@@ -85,7 +86,7 @@ boxplot(GST ~ treatment, data = plot.ROS, las = 2,
         ylim = c(-60, 130), pch = 20)
 mtext(c("0", "", "0.5", rep(c("0.5","2"), 3), "","0.5","2", "8"),at = c(seq(1, 13, 1)), side = 1, 
       line = 0.5, cex = 0.7)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
       side = 1, line = 2, las = 2)
 arrows(c(2, 10), -200, c(2, 10), 130, angle = 0, lwd = 1)
 text(x = x.sigGST, y = y.sigGST, "*", pos = 3, cex = 1.7)
@@ -101,7 +102,7 @@ boxplot(LPO ~ treatment, data = plot.ROS, las = 2,
         ylim = c(0, 120), pch = 20)
 mtext(c("0", "", "0.5", rep(c("0.5","2"), 3), "","0.5","2","8", "Vol%"),at = c(seq(1, 13, 1), 14), 
       side = 1, line = 0.5, cex = 0.7)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3, 4.5, 6.5, 8.5, 12), 
       side = 1, line = 2, las = 2)
 arrows(c(2, 10), -100, c(2, 10), 120, angle = 0, lwd = 1)
 text(x = x.sigLPO, y = y.sigLPO, c("*", "**"), pos = 3, cex = 1.7)

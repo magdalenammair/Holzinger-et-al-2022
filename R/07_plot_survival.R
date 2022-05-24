@@ -72,7 +72,8 @@ y.sig8 = max8$max[c(2,3,12)]
 
 
 ### plot
-png("Plots/plot_survival.png", height = 15, width = 25, units = "cm", res = 1000)
+#png("Plots/plot_survival.png", height = 15, width = 25, units = "cm", res = 500)
+tiff("Plots/plot_survival.tiff", height = 15, width = 25, units = "cm", res = 500)
 
 opar <- par(oma = c(5,1,1,1), mfrow = c(1,2), xpd = TRUE, bty = "l")
 
@@ -83,7 +84,7 @@ boxplot(prop.alive ~ treatment, data = plot.prop[plot.prop$Week == 4,], las = 2,
         ylim = c(0, 1), pch = 20)
 mtext(c("Concentration", "0", "", rep(c("0.5","2"), 4), "","0.5","2","8"),at = c(-2, seq(1, 14, 1)), 
       side = 1, line = 0.5, cex = 0.7)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
       side = 1, line = 2, las = 2)
 arrows(c(2, 11), -15, c(2, 11), 1.02, angle = 0, lwd = 1)
 text(x = c(3, 4, 14), y = y.sig4, "***", pos = 3, cex = 0.7)
@@ -99,7 +100,7 @@ boxplot(prop.alive ~ treatment, data = plot.prop[plot.prop$Week == 8,], las = 2,
         ylim = c(0, 1), pch = 20)
 mtext(c("0", "", rep(c("0.5","2"), 4), "","0.5","2","8", "Vol%"),at = c(seq(1, 14, 1), 16), 
       side = 1, line = 0.5, cex = 0.7)
-mtext(c("Control", "Brake dust", "Soot", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
+mtext(c("Control", "Brake dust", "Carbon black", "MP fibers", "MP fragments", "Mix"), at = c(1, 3.5, 5.5, 7.5, 9.5, 13), 
       side = 1, line = 2, las = 2)
 arrows(c(2, 11), -15, c(2, 11), 1.02, angle = 0, lwd = 1)
 text(x = c(3, 4, 14), y = y.sig8, "***", pos = 3, cex = 0.7)
