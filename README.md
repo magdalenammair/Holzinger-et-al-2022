@@ -26,6 +26,6 @@ The material consist of
 * a folder containing all [**R**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/R) code used for data preparation, statistical analysis and plotting
 * a folder containing all [**Plots**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/Plots) produced as an output of the code provided
 * a folder in which analysis [**Results**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/Results) are stored
-* a file giving [**information about software and package versions**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/sessioninfo.txt) used for the published analysis
+* a file giving [**information about software and package versions**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/sessionInfo.txt) used for the published analysis
 * the [**Supplementary Tables**](https://github.com/magdalenammair/Holzinger-et-al-2022/tree/master/Holzinger-et-al-SupplementaryTables.pdf) as published with the article
 ---
