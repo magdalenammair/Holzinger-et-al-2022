@@ -8,7 +8,7 @@ Supplementary Data for the Article "Comparison of fitness effects in the earthwo
 
 This repository provides all data and R code for 
   
-**Holzinger A, Mair MM, Lücker D, Seidenath D, Opel T, Langhof N, Otti O, Feldhaar H (2022) Comparison of fitness effects in the earthworm *Eisenia fetida* after exposure to single or multiple anthropogenic pollutants**. 
+**Holzinger A, Mair MM, Lücker D, Seidenath D, Opel T, Langhof N, Otti O, Feldhaar H (2022) Comparison of fitness effects in the earthworm *Eisenia fetida* after exposure to single or multiple anthropogenic pollutants. *Science of The Total Environment* 838: 156387. [**doi: 10.1016/j.scitotenv.2022.156387**](https://doi.org/10.1016/j.scitotenv.2022.156387)** 
     
       
 *Abstract*  
